@@ -151,7 +151,7 @@ protected:
 
             if (m_bNearToScreenEdge) {
                 const int NEAR_SPACE = 20;
-                QRect curGeo = geometry();
+                QRect curGeo = this->geometry();
 
                 bool isNearEdge = false;
                 QPoint nearToPoint;
@@ -181,7 +181,7 @@ protected:
                 }
 
                 if (isNearEdge) {
-                    move(nearToPoint);
+                    this->move(nearToPoint);
                     return true;
                 }
             }
